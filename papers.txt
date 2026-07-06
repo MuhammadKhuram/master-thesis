@@ -1,0 +1,20 @@
+1 - Semi-Supervised weed detection in vegetable fields: in-domain and cross-domain experiments
+2 - Zero-Shot Semantic Segmentation for Robots in Agriculture
+3 - YOLO-SAM AgriScan: A Unified Framework for Ripe Strawberry Detection and Segmentation with Few-Shot and Zero-Shot Learning
+4 - Unsupervised Domain Adaptation for Weed Segmentation Using Greedy Pseudo-labelling
+5 - Overcoming ﬁeld variability: unsupervised domain adaptation for enhanced crop-weed recognition in diverse farmlands
+
+
+
+
+- CDGL–YOLOv11Lite: A Lightweight Field Maize–Seedling Weed Detector Based on Cross-Domain Shared Attention and a Conditional Gated Linear Unit
+
+- CCUDA-SS: Cross-Crop Unsupervised Domain Adaptation for Semantic Segmentation
+
+- Phenology aware agricultural boundary extraction using segment anything model and planet scope imagery (zero shot learning approach)
+
+
+
+
+
+- A cross-domain challenge with panoptic segmentation in agriculture

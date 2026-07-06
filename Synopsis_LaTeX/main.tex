@@ -1,0 +1,62 @@
+%=====================================================================
+%  main.tex — University of Gujrat SYNOPSIS (modular project)
+%  Compile this file with pdfLaTeX (run TWICE for page references).
+%
+%  All formatting rules live in  uogformat.sty  — you should not need
+%  to touch it. Edit only:
+%    1. The details block just below (your name, reg #, supervisor...).
+%    2. The files in  sections/  for your actual content.
+%    3. references.tex  for your reference list.
+%    4. The page numbers in toc.tex / listoffigures.tex /
+%       listoftables.tex / listofappendices.tex after the final run.
+%=====================================================================
+\documentclass[12pt,a4paper]{article}
+\usepackage{uogformat}
+
+%---------------------------------------------------------------------
+%  >>>  YOUR DETAILS  <<<  (used on the title page)
+%---------------------------------------------------------------------
+\newcommand{\SynopsisTitle}{UNIFIED MULTI-TASK DEEP LEARNING FRAMEWORK FOR PRECISION CATTLE MONITORING}
+\newcommand{\ScholarName}{MUHAMMAD KHURAM}
+\newcommand{\RollNo}{\dashfill}
+\newcommand{\RegistrationNo}{24026122}
+\newcommand{\DegreeProgram}{MSc ELECTRICAL ENGINEERING}
+\newcommand{\Department}{ELECTRICAL ENGINEERING}
+\newcommand{\Faculty}{ENGINEERING}
+\newcommand{\CampusName}{HAFIZ HAYAT CAMPUS}
+\newcommand{\SupervisorName}{DR. SYED MUHAMMAD WASIF}
+\newcommand{\EnrolmentSemester}{FALL 2025}
+\newcommand{\FreezedSemesters}{NIL}
+\newcommand{\SubmissionDate}{\dashfill}
+\newcommand{\DRRCApprovalDate}{\dashfill}
+
+\begin{document}
+
+%---------------------- Preliminary pages: roman (i, ii, ...) --------
+\pagenumbering{roman}
+\pagestyle{prelims}
+
+\input{titlepage}          % (i)
+\input{toc}                % (ii)
+\input{listoffigures}      % (iii)
+\input{listoftables}       % (iv)
+\input{listofappendices}   % (v)
+
+%---------------------- Main body: arabic (Page X of Y) --------------
+\clearpage
+\pagenumbering{arabic}
+\setcounter{page}{1}
+\pagestyle{mainbody}
+
+\input{sections/abstract}
+\input{sections/introduction}
+\input{sections/literature}
+\input{sections/objectives}
+\input{sections/question}
+\input{sections/methodology}
+\input{sections/outcomes}
+
+\input{references}
+\input{appendices}
+
+\end{document}

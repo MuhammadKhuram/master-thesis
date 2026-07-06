@@ -1,0 +1,21 @@
+%=====================================================================
+%  listoffigures.tex  (same tabular style as TOC — Rules 1.9.10 / 7.x)
+%  Horizontal borders only, outer 1.5 pt. CAPS bold 11 pt heading.
+%  Caption text in normal 11 pt with dashed leader to the page number.
+%  >>> Add one row per figure and update page numbers manually. <<<
+%=====================================================================
+{\setlength{\parskip}{0pt}\begin{singlespace}
+\noindent
+\begin{tabularx}{\textwidth}{@{}X@{\hspace{1.5em}}r@{\hspace{1em}}}
+\specialrule{1.5pt}{0pt}{0pt}
+\multicolumn{2}{@{}c@{}}{\rule{0pt}{18pt}\makebox[\textwidth][c]{\textbf{LIST OF FIGURES}}} \\[4pt]
+\specialrule{1.5pt}{0pt}{0pt}
+\multicolumn{2}{@{}c@{}}{\rule{0pt}{18pt}\makebox[\textwidth]{\hfill\textbf{CONTENTS}\hfill\makebox[0pt][r]{\textbf{PAGE}}}} \\[4pt]
+\hline
+\rule{0pt}{16pt}%
+Figure-6.1: Architecture of the unified multi-task framework
+\leaders\hbox{-}\hfill\kern0pt & \textbf{03} \\[6pt]
+\specialrule{1.5pt}{0pt}{0pt}
+\end{tabularx}
+\end{singlespace}\par}
+\clearpage

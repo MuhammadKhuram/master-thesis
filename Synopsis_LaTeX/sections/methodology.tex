@@ -1,0 +1,39 @@
+\section{Methodology (Sampling\slash Measurement\slash Research Design\slash Data Analysis)}
+The proposed framework comprises a shared convolutional backbone with task-specific necks and three heads: a detection head, an ArcFace-based re-identification head, and a spatio-temporal behaviour head. Tracking is performed downstream using BoT-SORT-style association over the learned embeddings. The overall architecture is shown in Figure-\ref{fig:framework}.
+
+% ---- FIGURE: caption BELOW, bold label "Figure-6.1:" (Rules 1.7.4–1.7.6) ----
+% Helper macro: \uogfigure{file}{width}{caption}{label}
+\uogfigure{framework.png}{0.85\textwidth}%
+  {Architecture of the proposed unified multi-task framework (Reference if any)}%
+  {fig:framework}
+
+\subsection{Datasets}
+Four public datasets will be used: MultiCamCows2024, Cows2021, CattleBehaviours6, and CVB. Since no single dataset provides all label types per frame, a masked-label training scheme activates only the losses for which ground truth exists in each batch.
+
+\subsection{Evaluation Metrics}
+Detection will be evaluated with mAP; re-identification with rank-1 accuracy and mAP; tracking with HOTA, IDF1, MOTA, and identity switches; behaviour recognition with top-1 accuracy and macro-F1. The plan is summarised in Table-\ref{tab:metrics}.
+
+% ---- TABLE: caption ABOVE, bold label "Table-6.1:" (Rules 1.7.1–1.7.2, 1.7.6) ----
+\begin{table}[ht]
+  \caption{Evaluation metrics and datasets planned for each task of the proposed framework (Reference if any)}
+  \label{tab:metrics}
+  \begin{singlespace}
+  \begin{tabularx}{\textwidth}{lXl}
+    \specialrule{1.5pt}{0pt}{0pt}
+    \textbf{Task} & \textbf{Metrics} & \textbf{Dataset} \\
+    \hline
+    Detection & mAP@0.5, mAP@0.5:0.95 & Cows2021 \\
+    Re-identification & Rank-1, mAP & MultiCamCows2024 \\
+    Tracking & HOTA, IDF1, MOTA, IDS & Cows2021 \\
+    Behaviour recognition & Top-1 accuracy, macro-F1 & CattleBehaviours6, CVB \\
+    \specialrule{1.5pt}{0pt}{0pt}
+  \end{tabularx}
+  \end{singlespace}
+\end{table}
+
+\subsection{Multi-Task Loss}
+The framework is trained by minimising a weighted sum of the task losses, where the weights balance gradient magnitudes to mitigate negative transfer:
+% ---- EQUATION: right justified, numbered in parentheses (Rule 1.8.1) ----
+\begin{flushright}
+$L_{total} = \lambda_{det} L_{det} + \lambda_{id} L_{arc} + \lambda_{beh} L_{beh}$ \hspace{2cm} (6.1)
+\end{flushright}

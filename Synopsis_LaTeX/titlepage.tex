@@ -1,0 +1,65 @@
+%=====================================================================
+%  titlepage.tex — Synopsis title page (Rules 5.2, 6.1–6.5)
+%  Edit your details in main.tex (the \newcommand block).
+%=====================================================================
+% Title page uses the SAME margins as the body (left 1.5in, right/top/bottom 1in),
+% matching the actual UOG template file (its synopsis section, not the handbook's
+% 1in front pages). No geometry override needed.
+\thispagestyle{prelims}
+
+% Title page uses TIGHTER 1.15 line spacing so all 11 fields + 5 signature
+% lines fit on ONE page. (Body uses 1.5; change 1.15 below if you add/remove
+% fields and it spills over.)
+\begin{spacing}{1.15}
+
+\begin{center}
+% TITLE (Rule 6.2): CAPS, centered, bold, 16pt, with a rule line under it.
+% \fontsize{16}{19}: 16 = size, 19 = line height. Edit 16 to resize the title.
+{\fontsize{16}{19}\selectfont\bfseries \SynopsisTitle\par}
+\rule{\textwidth}{1pt}                 % the horizontal bar under the title. 1pt = thickness.
+
+\vspace{10pt}                          % gap below the bar (increase/decrease to taste)
+% "BY" + SCHOLAR NAME (Rule 6.3): CAPS, centered, bold, 14pt.
+{\fontsize{14}{17}\selectfont\bfseries BY\par}
+\vspace{4pt}                           % gap between BY and the name
+{\fontsize{14}{17}\selectfont\bfseries \ScholarName\par}
+\end{center}
+
+\vspace{4pt}                           % gap before the numbered details
+% NUMBERED DETAILS 1-11 (Rule 6.4): bold, CAPS, left, 14pt.
+% \fontsize{14}{18}: 14 = size, 18 = line height. parskip 0 = no extra gap between items.
+{\fontsize{14}{18}\selectfont\bfseries\setlength{\parskip}{0pt}
+% enumerate options:  label = "1." in bold;  leftmargin = indent of the list;
+%   itemsep = vertical gap BETWEEN items (shrink to fit more);  topsep = gap above list.
+\begin{enumerate}[label=\textbf{\arabic*.},leftmargin=2.2em,itemsep=3pt,topsep=0pt]
+  \item ROLL No: \RollNo
+  \item REGISTRATION No: \RegistrationNo
+  \item DEGREE PROGRAM: \DegreeProgram
+  \item DEPARTMENT: \Department
+  \item FACULTY: \Faculty
+  \item CAMPUS NAME: \CampusName
+  \item SUPERVISOR NAME: \SupervisorName
+  \item DEGREE ENROLMENT SEMESTER: \EnrolmentSemester
+  \item FREEZED OR MISSES SEMESTER(S) (IF ANY): \FreezedSemesters
+  \item DATE OF SYNOPSIS SUBMISSION TO THE DEPARTMENT: \SubmissionDate
+  \item DATE OF APPROVAL FROM DRRC: \DRRCApprovalDate
+\end{enumerate}
+\par}
+
+\vspace{12pt}                          % gap before signature block
+% SIGNATURE LINES (Rule 6.5): bold, left, 14pt, NOT capitals.
+% parskip 14pt = vertical gap BETWEEN signature lines (shrink to fit).
+{\fontsize{14}{18}\selectfont\bfseries\setlength{\parskip}{14pt}
+Scholar Signature: \dotfill           % \dotfill draws the "......" sign-here line
+
+Supervisor Signature: \dotfill
+
+Chairperson/Head Signature: \dotfill
+
+Convener Faculty Board Signature: \dotfill
+
+Date of approval by ASRB: \dotfill
+\par}
+
+\end{spacing}
+\clearpage

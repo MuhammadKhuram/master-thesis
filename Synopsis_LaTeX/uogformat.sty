@@ -1,0 +1,181 @@
+%=====================================================================
+%  uogformat.sty — University of Gujrat synopsis formatting rules
+%  All formatting lives here. Do not edit unless changing the format.
+%  Implements ASRB Handbook (Jan 2022) synopsis rules 5.x / 6.x / 7.x
+%  / 8.x / 9.x and the relevant table/figure/equation rules 1.7 / 1.8.
+%=====================================================================
+%
+%  ----------------------- QUICK FORMAT GUIDE -----------------------
+%  Font family : Times New Roman everywhere (newtx, mathptmx fallback)
+%
+%  ELEMENT                 FONT SIZE  WEIGHT/CASE        ALIGN   RULE
+%  ------------------------------------------------------------------
+%  Body / plain text        12 pt     normal             justify 1.6.1*
+%  Main section heading      12 pt     bold, CAPS         left    1.6.6
+%  Sub-heading (6.1)         12 pt     bold               left    1.6.7*
+%  Sub-sub (6.1.1 / .1.1)    12 pt     bold               left    5.6
+%  References                12 pt     normal             justify 1.6.3*
+%  Table caption (above)     11 pt     bold label+normal  justify 1.7.x
+%  Figure caption (below)    11 pt     bold label+normal  justify 1.7.4
+%  TOC / list headings       12 pt     bold, CAPS         center  7.2
+%  TOC / list entries        12 pt     normal             left    7.2
+%  Page number (prelim)      12 pt     normal  (i)(ii)    center  5.7
+%  Page number (body)        12 pt     normal  (Page X/Y) center  1.4
+%  --- title page (6.x) ---
+%  Synopsis title            16 pt     bold, CAPS         center  6.2
+%  "BY" + scholar name       14 pt     bold, CAPS         center  6.3
+%  Numbered details 1..11    14 pt     bold, CAPS         left    6.4
+%  Signature lines           14 pt     bold (not caps)    left    6.5
+%
+%  LINE SPACING : body = 1.5  (\setstretch{1.5}, true Word 1.5)
+%                 title page = 1.15 (set in titlepage.tex, to fit 1 page)
+%                 captions / references / TOC = single (singlespace)
+%  PARA SPACING : 12 pt before each paragraph (\parskip), no indent
+%  MARGINS      : left 1.5in, right/top/bottom 1in (from the .docx file)
+%
+%  * NOTE: synopsis Rules 5.4 / 9.2 say size 11, but the actual UOG
+%    template FILE uses 12 (thesis Rule 1.6.1). We match the file.
+%    To follow the literal "11" rule: change 12pt->11pt in main.tex.
+%
+%  HOW TO CHANGE THINGS:
+%   - Body size .......... main.tex: \documentclass[12pt,...]  (11/12)
+%   - Body line spacing .. this file: \setstretch{1.5}
+%   - Margins ............ this file: \usepackage[...]{geometry}
+%   - Heading sizes ...... this file: \titleformat blocks below
+%   - Title page sizes ... titlepage.tex (\fontsize{16}, {14} ...)
+%   - Title line spacing . titlepage.tex (\begin{spacing}{1.15})
+%  ------------------------------------------------------------------
+%
+\ProvidesPackage{uogformat}
+
+%-------------------- FONT FAMILY: Times New Roman -----------------
+\usepackage[T1]{fontenc}               % T1 = proper accents/hyphenation
+\usepackage[utf8]{inputenc}            % lets you type accented chars directly
+% Times New Roman. Prefer newtx (closest match to Word's TNR); fall back
+% to mathptmx if newtx is not installed, so it always compiles.
+% TO CHANGE FONT: replace newtxtext/newtxmath (or mathptmx) below, e.g.
+%   Arial-like -> \usepackage{helvet}\renewcommand{\familydefault}{\sfdefault}
+\IfFileExists{newtxtext.sty}{%
+  \usepackage{newtxtext}%              % <- main Times text font
+  \usepackage{newtxmath}%             % <- matching Times math font
+}{%
+  \usepackage{mathptmx}%              % <- fallback Times (text+math)
+}
+
+%-------------------- PAGE MARGINS (Rules 5.2, 5.3) ----------------
+% Values taken from the official .docx: left 1.5in (binding edge),
+% right/top/bottom 1in. Title page uses the SAME margins (set nowhere
+% else, so it inherits these).
+% TO CHANGE: edit any value below. e.g. all-1.5in -> margin=1.5in
+%   left=1.5in   <- binding margin (make bigger if your binder needs it)
+%   right=1in    <- right margin
+%   top=1in      <- top margin
+%   bottom=1in   <- bottom margin (footer/page number sits inside this)
+\usepackage[a4paper,left=1.5in,right=1in,top=1in,bottom=1in]{geometry}
+
+%-------------------- LINE & PARAGRAPH SPACING (Rule 5.1) ----------
+\usepackage{setspace}
+\setstretch{1.5}            % BODY line spacing = 1.5 (true Word 1.5).
+                           % TO CHANGE: 1.0=single, 1.15, 1.5, 2.0=double.
+                           % (\onehalfspacing is only ~1.25x — looks tight.)
+\setlength{\parindent}{0pt}% First-line indent. 0pt = no indent (Rule 1.5.3).
+                           % TO CHANGE: e.g. \setlength{\parindent}{1.5em}
+\setlength{\parskip}{6pt}  % Blank space BEFORE each paragraph (was 12pt).
+                           % TO CHANGE: bigger = more gap between paragraphs.
+
+%-------------------- PAGE NUMBERS (Rules 1.4, 5.7) ---------------
+\usepackage{fancyhdr}
+\usepackage{lastpage}                  % gives \pageref{LastPage} = total body pages
+\usepackage{etoolbox}
+
+% Preliminary pages -> (i), (ii), ... centered at bottom.
+\fancypagestyle{prelims}{%
+  \fancyhf{}%                          % clear all headers/footers
+  \renewcommand{\headrulewidth}{0pt}%  % 0pt = no header line. >0 draws a rule.
+  % \fontsize{11}{13}: 11 = number size, 13 = its line height. (\roman = i,ii,iii)
+  \fancyfoot[C]{\fontsize{11}{13}\selectfont(\roman{page})}%   [C]=center foot
+}
+% Main body pages -> (Page X of Y) centered at bottom.
+\fancypagestyle{mainbody}{%
+  \fancyhf{}%
+  \renewcommand{\headrulewidth}{0pt}%
+  % Change the wording inside () here if you want a different footer text.
+  \fancyfoot[C]{\fontsize{11}{13}\selectfont(Page \textbf{\arabic{page}} of \textbf{\pageref{LastPage}})}%
+}
+
+%-------------------- HEADINGS (Rules 5.5, 5.6, 1.6.6-1.6.8) ------
+\usepackage{titlesec}
+% titleformat syntax:
+%   \titleformat{\level}{FORMAT of text}{LABEL (number)}{GAP after number}{BEFORE-code}
+%   \titlespacing*{\level}{left-indent}{space-above}{space-below}
+% In \fontsize{A}{B}:  A = font size pt,  B = line height pt.
+
+% MAIN section heading -> "1. ABSTRACT"  (12pt, bold, CAPS, left)
+\titleformat{\section}
+  {\normalfont\fontsize{12}{14}\selectfont\bfseries\hyphenpenalty=10000}% 12pt bold; hyphenpenalty stops headings breaking words
+  {\thesection.}%       label "1." ; remove the dot here if you don't want it
+  {0.5em}%              gap between "1." and the title text
+  {\MakeUppercase}%     forces CAPS; delete this to keep normal case
+\titlespacing*{\section}{0pt}{10pt}{2pt}% indent 0, 10pt above, 2pt below (tighter)
+
+% SUB-heading 1st degree -> "6.1 Datasets"  (12pt, bold, left)
+% Template uses 12pt for sub-headings (written Rule 1.6.7 says 11; file=12).
+\titleformat{\subsection}
+  {\normalfont\fontsize{12}{14}\selectfont\bfseries}% <- 12pt bold (was 11)
+  {\thesubsection}{0.5em}{}
+\titlespacing*{\subsection}{0pt}{10pt}{2pt}% 10pt above, 2pt below (tighter)
+
+% SUB-SUB heading -> "6.1.1 ..."  (12pt, bold, left)
+\titleformat{\subsubsection}
+  {\normalfont\fontsize{12}{14}\selectfont\bfseries}% <- 12pt bold (was 11)
+  {\thesubsubsection}{0.5em}{}
+\titlespacing*{\subsubsection}{0pt}{10pt}{2pt}% 10pt above, 2pt below (tighter)
+
+% 4th level heading -> "6.1.1.1 ..." (12pt, bold, left) Rule 5.6
+\setcounter{secnumdepth}{4}            % 4 = number down to paragraph level
+\titleformat{\paragraph}
+  {\normalfont\fontsize{12}{14}\selectfont\bfseries}% <- 12pt bold (was 11)
+  {\theparagraph}{0.5em}{}
+\titlespacing*{\paragraph}{0pt}{10pt}{2pt}% 10pt above, 2pt below (tighter)
+
+%-------------------- TABLES / FIGURES / CAPTIONS (Rules 1.7.x) ----
+\usepackage{graphicx}                  % \includegraphics for figures
+\usepackage{array}                     % better column types
+\usepackage{tabularx}                  % auto-width tables (X column)
+\usepackage{booktabs}                  % \specialrule for thick borders
+\usepackage{caption}                   % caption styling
+\usepackage{enumitem}                  % list spacing control
+\usepackage{url}\urlstyle{same}        % URLs in body font (for references)
+\graphicspath{{figures/}}              % look for images in figures/ folder
+
+% Caption look: 11pt (small), single spacing, bold label, "Label: text".
+\captionsetup{font={small,stretch=1},% small = 11pt at a 12pt body; stretch=1 = single
+              labelfont=bf,%            label (Figure-6.1) in BOLD
+              labelsep=colon,%          separator after label = ":"  (change to period/space)
+              justification=justified,% caption text justified
+              singlelinecheck=false,%   keep long captions left-aligned, not centered
+              skip=8pt}%                gap between caption and figure/table
+\captionsetup[table]{position=above}   % TABLE caption ABOVE (Rule 1.7.x)
+\captionsetup[figure]{position=below}  % FIGURE caption BELOW (Rule 1.7.4)
+\renewcommand{\figurename}{Figure}     % word used in caption (change language here)
+\renewcommand{\tablename}{Table}
+\DeclareCaptionLabelFormat{uogdash}{#1-#2}% makes "Figure-6.1" (dash). Use "#1 #2" for a space.
+\captionsetup{labelformat=uogdash}
+\counterwithin{figure}{section}        % number figures per section: 6.1, 6.2...
+\counterwithin{table}{section}         % number tables per section: 6.1, 6.2...
+% (Remove the two \counterwithin lines for plain Figure-1, Table-1 numbering.)
+
+%-------------------- HELPER MACROS --------------------------------
+\newcommand{\dashfill}{\leaders\hbox{-}\hfill\kern0pt}   % a row of "----" for blank title fields
+\newcommand{\tocdots}{\dotfill}                          % the "......" leader in the TOC
+
+% Insert a figure the UOG way:  \uogfigure{file}{width}{caption}{label}
+%   #1 file (in figures/), #2 width e.g. 0.85\textwidth, #3 caption text, #4 \ref label
+\newcommand{\uogfigure}[4]{%
+  \begin{figure}[ht]%                  % [ht] = here/top placement
+    \centering
+    \includegraphics[width=#2]{#1}%
+    \begin{singlespace}\caption{#3}\label{#4}\end{singlespace}% caption single-spaced
+  \end{figure}}
+
+\endinput

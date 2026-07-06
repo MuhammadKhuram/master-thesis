@@ -1,0 +1,13 @@
+\section{Introduction}
+Continuous monitoring of individual cattle supports early detection of lameness, oestrus, and abnormal behaviour, directly improving animal welfare and farm economics. Manual observation does not scale to commercial herds, motivating automated vision-based systems.
+
+Most published systems address detection, re-identification, tracking, and behaviour recognition as separate models chained in a pipeline. Each stage recomputes visual features, multiplying inference cost and propagating errors between stages. A shared-representation multi-task design can remove this redundancy.
+
+\subsection{Background of the Study}
+Deep convolutional and transformer-based detectors now achieve high accuracy on livestock imagery, while metric-learning methods enable individual identification from coat patterns. Joint detection-and-embedding models such as FairMOT demonstrate that detection and re-identification can share a backbone, although task competition must be managed.
+
+\subsubsection{Scope of the Work}
+This research is limited to vision-based monitoring of housed dairy and beef cattle using fixed barn cameras and publicly available datasets.
+
+\paragraph{Assumptions}
+Cameras are assumed to be calibrated, fixed, and to provide continuous daytime footage of the monitored pens.

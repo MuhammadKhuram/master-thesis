@@ -1,0 +1,38 @@
+%=====================================================================
+%  toc.tex — Table of Contents (Rules 7.1, 7.2)
+%  Tabular, horizontal borders only. Headings CAPS bold, entries normal.
+%  >>> Update the page numbers (the \textbf{..} on the right) manually. <<<
+%
+%  Column spec  {@{}X@{\hspace{1.5em}}r@{\hspace{1em}}} means:
+%    X            = Contents column (flexes to fill width; holds the dots)
+%    \hspace{1.5em} = GAP between the dotted leader and the page number
+%    r            = Page column, right-aligned
+%    \hspace{1em} = right padding so numbers aren't jammed to the border
+%  \specialrule{1.5pt}{0}{0} = thick (1.5pt) horizontal border.
+%  \tocdots = the "......" leader (defined in uogformat.sty).
+%=====================================================================
+{\setlength{\parskip}{0pt}\begin{singlespace}
+\noindent
+\begin{tabularx}{\textwidth}{@{}X@{\hspace{1.5em}}r@{\hspace{1em}}}
+\specialrule{1.5pt}{0pt}{0pt}
+\multicolumn{2}{@{}c@{}}{\rule{0pt}{18pt}\makebox[\textwidth][c]{\textbf{Table of contents}}} \\[4pt]
+\specialrule{1.5pt}{0pt}{0pt}
+\multicolumn{2}{@{}c@{}}{\rule{0pt}{18pt}\makebox[\textwidth]{\hfill\textbf{Contents}\hfill\makebox[0pt][r]{\textbf{Page}}}} \\[4pt]
+\hline
+\rule{0pt}{16pt}%
+LIST OF FIGURES\tocdots                          & \textbf{iii} \\[6pt]
+LIST OF TABLES\tocdots                           & \textbf{iv}  \\[6pt]
+LIST OF APPENDICES\tocdots                       & \textbf{v}   \\[6pt]
+ABSTRACT\tocdots                                 & \textbf{01} \\[6pt]
+INTRODUCTION\tocdots                             & \textbf{01} \\[6pt]
+LITERATURE REVIEW\tocdots                        & \textbf{02} \\[6pt]
+OBJECTIVES OF RESEARCH\tocdots                   & \textbf{02} \\[6pt]
+RESEARCH QUESTION/PROBLEM\tocdots                & \textbf{03} \\[6pt]
+METHODOLOGY (SAMPLING/MEASUREMENT/RESEARCH DESIGN/DATA ANALYSIS)\tocdots & \textbf{03} \\[6pt]
+EXPECTED OUTCOMES OF RESEARCH\tocdots            & \textbf{04} \\[6pt]
+REFERENCES\tocdots                               & \textbf{04} \\[6pt]
+APPENDICES\tocdots                               & \textbf{05} \\[4pt]
+\specialrule{1.5pt}{0pt}{0pt}
+\end{tabularx}
+\end{singlespace}\par}
+\clearpage
