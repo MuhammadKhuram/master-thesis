@@ -1,13 +1,17 @@
-\section{Introduction}
-Continuous monitoring of individual cattle supports early detection of lameness, oestrus, and abnormal behaviour, directly improving animal welfare and farm economics. Manual observation does not scale to commercial herds, motivating automated vision-based systems.
+\section{INTRODUCTION}
 
-Most published systems address detection, re-identification, tracking, and behaviour recognition as separate models chained in a pipeline. Each stage recomputes visual features, multiplying inference cost and propagating errors between stages. A shared-representation multi-task design can remove this redundancy.
+The global yield loss caused by weeds amounts to 34\% on average (Oerke et al). The traditional homogeneous chemical weedicide application and labor-intensive hand weeding is becoming ineffective due to ecological impact, rising costs and the rapid evolution of herbicide-resistant weeds \cite{gao2025a}. There is a growing need for sustainable production methods. One such promising method is the development of automated precision agriculture solutions that use machine vision for site-specific precision weed management.
+
+While  appealing in theory, deep learning-based approaches are currently limited by their reliance on fully supervised frameworks. These approaches require extensive pixel level annotated dataset, which is a time and resource-consuming process (up to 2.5 hours per image) \cite{nadeem2026}. Furthermore, the traditional computer vision models suffer from domain shift problem and fail catastrophically when deployed in a new field due to the significant variations in lighting, soil type and crop geometries \cite{magistri2023}. In this work, we propose a novel universal zero-shot weed detection framework hybrid foundation-model architecture, which requires only a small amount of annotated data.
 
 \subsection{Background of the Study}
-Deep convolutional and transformer-based detectors now achieve high accuracy on livestock imagery, while metric-learning methods enable individual identification from coat patterns. Joint detection-and-embedding models such as FairMOT demonstrate that detection and re-identification can share a backbone, although task competition must be managed.
 
-\subsubsection{Scope of the Work}
-This research is limited to vision-based monitoring of housed dairy and beef cattle using fixed barn cameras and publicly available datasets.
+Recent advancements in agricultural computer vision reveal that one-stage detectors, like YOLO variants, effectively localize multiple targets at a fast speed in natural environments \cite{gao2024}. At the same time, Vision Foundation Models such as the Segment Anything Model (SAM) enable powerful zero-shot segmentation tasks through the use of a pre-trained architecture that does not require task-specific training data \cite{ghose2025}. Recent works highlight the possibility of combining such models in a cascade, where a fast, lightweight one-stage detector is used to provide spatial bounding box prompts to a foundation model, achieving superior performance over standard one-stage or two-stage detectors. However, such approaches are often memory-intensive and suffer from a computational complexity of quadratic complexity in the number of prompts, necessitating optimization in order to be deployed on agricultural hardware at the edge \cite{mo2025}.
 
-\paragraph{Assumptions}
-Cameras are assumed to be calibrated, fixed, and to provide continuous daytime footage of the monitored pens.
+\subsection{Scope of the Work}
+
+This research will be limited to the development of a software which will be used to use the vision-based system to detect weeds on a robotic rover. The proposed approach will be based on the use of publicly available image sets of different crops (deng et al). The research effort will not include the development of the mechanical design of the rover, nor the development of physical mechanisms that will perform the weeding function.
+
+\subsubsection{Assumptions}
+
+The current study makes two critical assumptions in order to conduct the analysis. First, the data sets and the camera equipment used for this research will produce standard daylight optical images. Their quality and resolution are sufficient to allow for the generation of spatial prompts accurate enough for the foundational model \cite{ghose2025}. Second, the limitations inherent in the edge-computing hardware can be approximated in software via standard performance metrics, such as FPS and parameter count.

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.5.1)  5 JUL 2026 08:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.5.1)  13 JUL 2026 21:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -477,6 +477,122 @@ Package: enumitem 2025/02/06 v3.11 Customized lists
 (c:/texlive/2026/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip18
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+(c:/texlive/2026/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2026-01-29 v7.01p Hypertext links for LaTeX
+
+(c:/texlive/2026/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+)
+(c:/texlive/2026/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+(c:/texlive/2026/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+
+(c:/texlive/2026/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
+)
+(c:/texlive/2026/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(c:/texlive/2026/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+))
+(c:/texlive/2026/texmf-dist/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+)
+(c:/texlive/2026/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2026-01-29 v2.58 Cross-referencing by name of section
+
+(c:/texlive/2026/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(c:/texlive/2026/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+
+(c:/texlive/2026/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+))
+\c@section@level=\count318
+)
+(c:/texlive/2026/texmf-dist/tex/generic/stringenc/stringenc.sty
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
+)
+)
+\@linkdim=\dimen272
+\Hy@linkcounter=\count319
+\Hy@pagecounter=\count320
+
+(c:/texlive/2026/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2026-01-29 v7.01p Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+(c:/texlive/2026/texmf-dist/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+\Hy@SavedSpaceFactor=\count321
+
+(c:/texlive/2026/texmf-dist/tex/latex/hyperref/puenc.def
+File: puenc.def 2026-01-29 v7.01p Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+Package hyperref Info: Hyper figures OFF on input line 4201.
+Package hyperref Info: Link nesting OFF on input line 4206.
+Package hyperref Info: Hyper index ON on input line 4209.
+Package hyperref Info: Plain pages OFF on input line 4216.
+Package hyperref Info: Backreferencing OFF on input line 4221.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4468.
+\c@Hy@tempcnt=\count322
+LaTeX Info: Redefining \url on input line 4807.
+\XeTeXLinkMargin=\dimen273
+
+(c:/texlive/2026/texmf-dist/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+
+(c:/texlive/2026/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count323
+\Field@Width=\dimen274
+\Fld@charsize=\dimen275
+Package hyperref Info: Hyper figures OFF on input line 6084.
+Package hyperref Info: Link nesting OFF on input line 6089.
+Package hyperref Info: Hyper index ON on input line 6092.
+Package hyperref Info: backreferencing OFF on input line 6099.
+Package hyperref Info: Link coloring OFF on input line 6104.
+Package hyperref Info: Link coloring with OCG OFF on input line 6109.
+Package hyperref Info: PDF/A mode OFF on input line 6114.
+\Hy@abspage=\count324
+\c@Item=\count325
+\c@Hfootnote=\count326
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+
+(c:/texlive/2026/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2026-01-29 v7.01p Hyperref driver for pdfTeX
+\Fld@listcount=\count327
+\c@bookmark@seq@number=\count328
+
+(c:/texlive/2026/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2025-06-21 v1.11 Rerun checks for auxiliary files (HO)
+
+(c:/texlive/2026/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+84.
+)
+\Hy@SectionHShift=\skip73
 ))
 LaTeX Font Info:    Trying to load font information for T1+ntxtlf on input line
  33.
@@ -531,19 +647,23 @@ e 33.
 File: lmxntxexx.fd 2016/07/03 Fontinst v1.933 font definitions for LMX/ntxexx.
 )
 LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
 
 (c:/texlive/2026/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count318
-\scratchdimen=\dimen272
+\scratchcounter=\count329
+\scratchdimen=\dimen276
 \scratchbox=\box59
-\nofMPsegments=\count319
-\nofMParguments=\count320
+\nofMPsegments=\count330
+\nofMParguments=\count331
 \everyMPshowfont=\toks37
-\MPscratchCnt=\count321
-\MPscratchDim=\dimen273
-\MPnumerator=\count322
-\makeMPintoPDFobject=\count323
+\MPscratchCnt=\count332
+\MPscratchDim=\dimen277
+\MPnumerator=\count333
+\makeMPintoPDFobject=\count334
 \everyMPtoPDFconversion=\toks38
 ) (c:/texlive/2026/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -554,8 +674,8 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-\c@mv@tabular=\count324
-\c@mv@boldtabular=\count325
+\c@mv@tabular=\count335
+\c@mv@boldtabular=\count336
 LaTeX Info: Command `\dddot' is already robust on input line 33.
 LaTeX Info: Command `\ddddot' is already robust on input line 33.
 
@@ -594,8 +714,14 @@ LaTeX Info: Command `\ddddot' is already robust on input line 33.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
-(./titlepage.tex
+Package hyperref Info: Link coloring OFF on input line 33.
+(./main.out) (./main.out)
+\@outlinefile=\write3
+\openout3 = `main.out'.
+
+ (./titlepage.tex
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
 (Font)              scaled to size 16.0pt on input line 18.
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
@@ -609,8 +735,8 @@ LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
  [1
 
 {c:/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/texlive/2026/
-texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf.enc}])
-(./toc.tex (c:/texlive/2026/texmf-dist/tex/latex/newtx/ot1minntx.fd)
+texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf.enc}]) (./toc.tex
+(c:/texlive/2026/texmf-dist/tex/latex/newtx/ot1minntx.fd)
 (c:/texlive/2026/texmf-dist/tex/latex/newtx/untxmia.fd)
 (c:/texlive/2026/texmf-dist/tex/latex/newtx/untxsym.fd)
 (c:/texlive/2026/texmf-dist/tex/latex/newtx/untxsyc.fd)
@@ -628,18 +754,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 36--36
 
 ]) (./sections/abstract.tex) (./sections/introduction.tex
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
-(Font)              scaled to size 11.0pt on input line 12.
+(Font)              scaled to size 11.0pt on input line 10.
  [1
 
 
 ])
-(./sections/literature.tex) (./sections/objectives.tex)
-(./sections/question.tex) (./sections/methodology.tex [2]
+(./sections/literature.tex [2] [3] [4] [5] [6]) (./sections/objectives.tex
+[7]) (./sections/question.tex) (./sections/methodology.tex
 Overfull \hbox (19.22054pt too wide) in paragraph at lines 1--1
 |[]\T1/ntxtlf/b/n/12 METHODOLOGY (SAM-PLING/MEASUREMENT/RESEARCH DE-SIGN/DATA
  []
 
-<figures/framework.png, id=27, 903.375pt x 501.875pt>
+<figures/framework.png, id=205, 903.375pt x 501.875pt>
 File: figures/framework.png Graphic file (type png)
 <use figures/framework.png>
 Package pdftex.def Info: figures/framework.png  used on input line 8.
@@ -648,11 +774,14 @@ LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
 (Font)              scaled to size 10.95pt on input line 8.
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
 (Font)              scaled to size 10.95pt on input line 8.
-[3 <./figures/framework.png (PNG copy)>]) (./sections/outcomes.tex)
-(./references.tex
-LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
-(Font)              scaled to size 12.0pt on input line 22.
-) (./appendices.tex [4] [5]
+[8 <./figures/framework.png (PNG copy)>]) (./sections/outcomes.tex)
+(./references.tex [9]
+Underfull \hbox (badness 1038) in paragraph at lines 78--79
+[]\T1/ntxtlf/m/n/12 P. Verma and A. Paul, ``To-ward Grounded YOLO-SAM: Uni-fied
+ De-tec-
+ []
+
+[10]) (./appendices.tex [11]
 LaTeX Font Info:    Calculating math sizes for size <16> on input line 8.
 LaTeX Font Info:    Font shape `OT1/minntx/m/n' will be
 (Font)              scaled to size 16.0pt on input line 8.
@@ -702,7 +831,7 @@ LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
 (Font)              scaled to size 11.67993pt on input line 8.
 LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
 (Font)              scaled to size 8.80005pt on input line 8.
-) [6
+) [12
 
 ]
 
@@ -712,24 +841,26 @@ enddocument/afterlastpage (AED): lastpage setting LastPage.
 LaTeX2e <2025-11-01>
 L3 programming layer <2020/03/25>
  ***********
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: B638851DF198B39F5D43BE74B574E51A;3595.
  ) 
 Here is how much of TeX's memory you used:
- 10399 strings out of 467525
- 156885 string characters out of 5423210
- 559563 words of memory out of 5000000
- 39111 multiletter control sequences out of 15000+600000
- 687126 words of font info for 109 fonts, out of 8000000 for 9000
+ 17022 strings out of 467525
+ 259258 string characters out of 5423210
+ 668573 words of memory out of 5000000
+ 45565 multiletter control sequences out of 15000+600000
+ 684269 words of font info for 108 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 90i,11n,131p,923b,469s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 90i,11n,131p,1677b,636s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2026/texmf-dist/fonts/type1/public/newtx/NewTXMI.pfb><c:/texlive/
 2026/texmf-dist/fonts/type1/public/newtx/txmiaX.pfb><c:/texlive/2026/texmf-dist
 /fonts/type1/public/newtx/txsys.pfb><c:/texlive/2026/texmf-dist/fonts/type1/pub
 lic/newtx/ztmb.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/newtx/ztmr.pf
-b><c:/texlive/2026/texmf-dist/fonts/type1/public/newtx/ztmri.pfb>
-Output written on main.pdf (11 pages, 150291 bytes).
+b>
+Output written on main.pdf (17 pages, 146313 bytes).
 PDF statistics:
- 72 PDF objects out of 1000 (max. 8388607)
- 45 compressed objects within 1 object stream
- 0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 292 PDF objects out of 1000 (max. 8388607)
+ 259 compressed objects within 3 object streams
+ 84 named destinations out of 1000 (max. 500000)
+ 150 words of extra memory for PDF output out of 10000 (max. 10000000)
 
